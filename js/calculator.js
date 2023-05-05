@@ -124,7 +124,11 @@ function operate(operator, n1, n2) {
   }
 
   const res = +operation(n1, n2);
-  if (!Number.isInteger(res)) return res.toFixed(4);
+  if (!Number.isInteger(res)) {
+    const decimalNumbers = res.toString().split(".").pop().length;
+    if (decimalNumbers > 4) return res.toFixed(4);
+  }
+
   return res;
 }
 
