@@ -1,0 +1,52 @@
+body {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+}
+
+main div {
+    margin: 0% 20%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 3rem;
+    line-height: 3rem;
+    min-height: 3rem;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-type: none;
+
+    padding: 0;
+    margin: 2% 8% 0 22%;
+}
+
+main ul li {
+    width: 5vw;
+    height: 5vw;
+
+    text-align: center;
+    line-height: 5vw;
+    border-radius: 50%;
+    margin: 1vw;
+    background-color: #666666;
+}
+
+main ul li:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.operator:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
