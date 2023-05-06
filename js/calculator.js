@@ -19,6 +19,7 @@ function getTagValue(e) {
   const value = e.target.innerText;
   process(value);
 }
+
 function process(inputCharacter) {
   if (numberInString.includes(inputCharacter)) {
     doIfInputNumber(inputCharacter);
@@ -31,6 +32,7 @@ function process(inputCharacter) {
     clearData();
   } else throw Exception("Invalid input character");
 }
+
 function doIfInputNumber(inputCharacter) {
   //input first number but have not input the second number, then clear the screen
   if (reseverdOperator !== null && secondNumber === null) clearScreen();
@@ -83,6 +85,7 @@ function clearScreen() {
 function clearData() {
   firstNumber = secondNumber = reseverdOperator = null;
 }
+
 function pressOperator(operator) {
   if (firstNumber !== null && secondNumber !== null) {
     result = operate(reseverdOperator, firstNumber, secondNumber);
@@ -148,7 +151,7 @@ function divide(n1, n2) {
   if (n2 == 0) {
     clearData();
     alert("x / 0 is not allowed, program has been initalized");
-    return Infinity;
+    return "";
   }
 
   return n1 / n2;
